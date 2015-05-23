@@ -1,0 +1,36 @@
+// Copyright 2014-2015 Github, Inc.
+// See THIRD-PARTY-LICENSE.md for more info
+
+@mixin browser-notification($txt, $bg) {
+
+  .content {
+    color: darken($txt, 0.40);
+    background-color: lighten($bg, 0.25);
+  }
+
+  a {
+    color: darken($txt, 0.20);
+  }
+
+  code {
+    color: darken($txt, 0.40);
+    background-color: desaturate(lighten($bg, 0.18), 0.5);
+  }
+
+  &.icon:before {
+    color: lighten($bg, 0.36);
+    background-color: $bg;
+  }
+
+  .close-all.btn {
+    border: 1px solid fade-out(darken($txt, 0.40), 0.70);
+    color: fade-out(darken($txt, 0.40), 0.40);
+    text-shadow: none;
+
+    &:hover {
+      background: none;
+      border-color: fade-out(darken($txt, 0.40), 0.20);
+      color: darken($txt, 0.40);
+    }
+  }
+}

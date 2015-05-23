@@ -1,0 +1,2195 @@
+atom-notifications {
+  display: block;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  font-size: 1.2em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+}
+atom-notifications .btn {
+  color: #aaaaaa;
+  border-radius: 2px;
+  border: none;
+  text-shadow: none;
+  height: 27px;
+  line-height: 25px;
+  padding: 0 10px;
+  font-size: 11px;
+  z-index: 0;
+  background-color: #43484d;
+}
+atom-notifications .btn:hover {
+  background-color: #4f555b;
+}
+atom-notifications .btn.selected,
+atom-notifications .btn.selected:hover {
+  z-index: 1;
+  background-color: #5c6064;
+}
+atom-notifications .btn.btn-xs,
+atom-notifications .btn-group-xs > .btn {
+  padding: 2.5px 5px;
+  font-size: 9px;
+  height: auto;
+  line-height: 1.3em;
+}
+atom-notifications .btn.btn-sm,
+atom-notifications .btn-group-sm > .btn {
+  padding: 2.5px 5px;
+  height: auto;
+  line-height: 1.3em;
+}
+atom-notifications .btn.btn-lg,
+atom-notifications .btn-group-lg > .btn {
+  font-size: 13px;
+  padding: 8px 12px;
+  height: auto;
+  line-height: 1.3em;
+}
+atom-notifications .btn-group > .btn {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+atom-notifications .btn-group > .btn:first-child {
+  border-left: none;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+atom-notifications .btn-group > .btn:last-child,
+atom-notifications .btn-group > .btn.selected:last-child,
+atom-notifications .btn-group > .dropdown-toggle {
+  border-right: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+atom-notifications .btn-toolbar > .btn-group + .btn-group,
+atom-notifications .btn-toolbar > .btn-group + .btn,
+atom-notifications .btn-toolbar > .btn + .btn {
+  float: none;
+  display: inline-block;
+  margin-left: 0;
+}
+atom-notifications .btn-toolbar > * {
+  margin-right: 5px;
+}
+atom-notifications .btn-toolbar > *:last-child {
+  margin-right: 0;
+}
+atom-notifications .btn {
+  color: #aaaaaa;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#43484d, #373b3f);
+}
+atom-notifications .btn:focus {
+  color: #aaaaaa;
+}
+atom-notifications .btn:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#4f555b, #43484d);
+}
+atom-notifications .btn.selected,
+atom-notifications .btn.selected:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#505357, #5c6064);
+}
+atom-notifications .btn.selected:hover,
+atom-notifications .btn.selected:hover:hover {
+  background-image: -webkit-linear-gradient(#5c6064, #505357);
+}
+atom-notifications .btn.btn-primary {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#007acc, #006ab3);
+}
+atom-notifications .btn.btn-primary:focus {
+  color: #ffffff;
+}
+atom-notifications .btn.btn-primary:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#0098ff, #0089e6);
+}
+atom-notifications .btn.btn-primary.selected,
+atom-notifications .btn.btn-primary.selected:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#0089e6, #0098ff);
+}
+atom-notifications .btn.btn-primary.selected:hover,
+atom-notifications .btn.btn-primary.selected:hover:hover {
+  background-image: -webkit-linear-gradient(#0098ff, #0089e6);
+}
+atom-notifications .btn.btn-info {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#007acc, #006ab3);
+}
+atom-notifications .btn.btn-info:focus {
+  color: #ffffff;
+}
+atom-notifications .btn.btn-info:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#0098ff, #0089e6);
+}
+atom-notifications .btn.btn-info.selected,
+atom-notifications .btn.btn-info.selected:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#0089e6, #0098ff);
+}
+atom-notifications .btn.btn-info.selected:hover,
+atom-notifications .btn.btn-info.selected:hover:hover {
+  background-image: -webkit-linear-gradient(#0098ff, #0089e6);
+}
+atom-notifications .btn.btn-success {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#129c4e, #0f8543);
+}
+atom-notifications .btn.btn-success:focus {
+  color: #ffffff;
+}
+atom-notifications .btn.btn-success:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#17ca65, #14b35a);
+}
+atom-notifications .btn.btn-success.selected,
+atom-notifications .btn.btn-success.selected:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#14b35a, #17ca65);
+}
+atom-notifications .btn.btn-success.selected:hover,
+atom-notifications .btn.btn-success.selected:hover:hover {
+  background-image: -webkit-linear-gradient(#17ca65, #14b35a);
+}
+atom-notifications .btn.btn-warning {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#f89400, #df8500);
+}
+atom-notifications .btn.btn-warning:focus {
+  color: #ffffff;
+}
+atom-notifications .btn.btn-warning:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#ffaa2c, #ffa013);
+}
+atom-notifications .btn.btn-warning.selected,
+atom-notifications .btn.btn-warning.selected:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#ffa013, #ffaa2c);
+}
+atom-notifications .btn.btn-warning.selected:hover,
+atom-notifications .btn.btn-warning.selected:hover:hover {
+  background-image: -webkit-linear-gradient(#ffaa2c, #ffa013);
+}
+atom-notifications .btn.btn-error {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#990000, #800000);
+}
+atom-notifications .btn.btn-error:focus {
+  color: #ffffff;
+}
+atom-notifications .btn.btn-error:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#cc0000, #b30000);
+}
+atom-notifications .btn.btn-error.selected,
+atom-notifications .btn.btn-error.selected:hover {
+  color: #ffffff;
+  background-image: -webkit-linear-gradient(#b30000, #cc0000);
+}
+atom-notifications .btn.btn-error.selected:hover,
+atom-notifications .btn.btn-error.selected:hover:hover {
+  background-image: -webkit-linear-gradient(#cc0000, #b30000);
+}
+atom-notifications .caret {
+  border-top: 5px solid #fff;
+  margin-top: -1px;
+}
+atom-notifications .octicon::before {
+  margin-right: 5px;
+}
+atom-notifications a.octicon,
+atom-notifications button.octicon {
+  text-decoration: none;
+}
+atom-notifications .octicon-alert::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02d";
+}
+atom-notifications .octicon-alignment-align::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f08a";
+}
+atom-notifications .octicon-alignment-aligned-to::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f08e";
+}
+atom-notifications .octicon-alignment-unalign::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f08b";
+}
+atom-notifications .octicon-arrow-down::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f03f";
+}
+atom-notifications .octicon-arrow-left::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f040";
+}
+atom-notifications .octicon-arrow-right::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f03e";
+}
+atom-notifications .octicon-arrow-small-down::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a0";
+}
+atom-notifications .octicon-arrow-small-left::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a1";
+}
+atom-notifications .octicon-arrow-small-right::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f071";
+}
+atom-notifications .octicon-arrow-small-up::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f09f";
+}
+atom-notifications .octicon-arrow-up::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f03d";
+}
+atom-notifications .octicon-beer::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f069";
+}
+atom-notifications .octicon-book::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f007";
+}
+atom-notifications .octicon-bookmark::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f07b";
+}
+atom-notifications .octicon-briefcase::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d3";
+}
+atom-notifications .octicon-broadcast::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f048";
+}
+atom-notifications .octicon-browser::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c5";
+}
+atom-notifications .octicon-bug::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f091";
+}
+atom-notifications .octicon-calendar::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f068";
+}
+atom-notifications .octicon-check::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f03a";
+}
+atom-notifications .octicon-checklist::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f076";
+}
+atom-notifications .octicon-chevron-down::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a3";
+}
+atom-notifications .octicon-chevron-left::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a4";
+}
+atom-notifications .octicon-chevron-right::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f078";
+}
+atom-notifications .octicon-chevron-up::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a2";
+}
+atom-notifications .octicon-circle-slash::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f084";
+}
+atom-notifications .octicon-circuit-board::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d6";
+}
+atom-notifications .octicon-clippy::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f035";
+}
+atom-notifications .octicon-clock::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f046";
+}
+atom-notifications .octicon-cloud-download::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f00b";
+}
+atom-notifications .octicon-cloud-upload::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f00c";
+}
+atom-notifications .octicon-code::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05f";
+}
+atom-notifications .octicon-color-mode::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f065";
+}
+atom-notifications .octicon-comment::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02b";
+}
+atom-notifications .octicon-comment-add::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02b";
+}
+atom-notifications .octicon-comment-discussion::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04f";
+}
+atom-notifications .octicon-credit-card::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f045";
+}
+atom-notifications .octicon-dash::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0ca";
+}
+atom-notifications .octicon-dashboard::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f07d";
+}
+atom-notifications .octicon-database::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f096";
+}
+atom-notifications .octicon-device-camera::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f056";
+}
+atom-notifications .octicon-device-camera-video::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f057";
+}
+atom-notifications .octicon-device-desktop::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f27c";
+}
+atom-notifications .octicon-device-mobile::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f038";
+}
+atom-notifications .octicon-diff::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04d";
+}
+atom-notifications .octicon-diff-added::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06b";
+}
+atom-notifications .octicon-diff-ignored::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f099";
+}
+atom-notifications .octicon-diff-modified::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06d";
+}
+atom-notifications .octicon-diff-removed::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06c";
+}
+atom-notifications .octicon-diff-renamed::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06e";
+}
+atom-notifications .octicon-ellipsis::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f09a";
+}
+atom-notifications .octicon-eye::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04e";
+}
+atom-notifications .octicon-eye-unwatch::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04e";
+}
+atom-notifications .octicon-eye-watch::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04e";
+}
+atom-notifications .octicon-file-add::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05d";
+}
+atom-notifications .octicon-file-binary::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f094";
+}
+atom-notifications .octicon-file-code::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f010";
+}
+atom-notifications .octicon-file-directory::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f016";
+}
+atom-notifications .octicon-file-directory-create::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05d";
+}
+atom-notifications .octicon-file-media::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f012";
+}
+atom-notifications .octicon-file-pdf::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f014";
+}
+atom-notifications .octicon-file-submodule::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f017";
+}
+atom-notifications .octicon-file-symlink-directory::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0b1";
+}
+atom-notifications .octicon-file-symlink-file::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0b0";
+}
+atom-notifications .octicon-file-text::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f011";
+}
+atom-notifications .octicon-file-zip::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f013";
+}
+atom-notifications .octicon-flame::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d2";
+}
+atom-notifications .octicon-fold::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0cc";
+}
+atom-notifications .octicon-gear::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02f";
+}
+atom-notifications .octicon-gift::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f042";
+}
+atom-notifications .octicon-gist::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f00e";
+}
+atom-notifications .octicon-gist-fork::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f002";
+}
+atom-notifications .octicon-gist-new::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05d";
+}
+atom-notifications .octicon-gist-private::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06a";
+}
+atom-notifications .octicon-gist-secret::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f08c";
+}
+atom-notifications .octicon-git-branch::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f020";
+}
+atom-notifications .octicon-git-branch-create::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f020";
+}
+atom-notifications .octicon-git-branch-delete::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f020";
+}
+atom-notifications .octicon-git-commit::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f01f";
+}
+atom-notifications .octicon-git-compare::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0ac";
+}
+atom-notifications .octicon-git-fork-private::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06a";
+}
+atom-notifications .octicon-git-merge::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f023";
+}
+atom-notifications .octicon-git-pull-request::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f009";
+}
+atom-notifications .octicon-git-pull-request-abandoned::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f009";
+}
+atom-notifications .octicon-globe::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0b6";
+}
+atom-notifications .octicon-graph::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f043";
+}
+atom-notifications .octicon-heart::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\2665";
+}
+atom-notifications .octicon-history::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f07e";
+}
+atom-notifications .octicon-home::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f08d";
+}
+atom-notifications .octicon-horizontal-rule::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f070";
+}
+atom-notifications .octicon-hourglass::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f09e";
+}
+atom-notifications .octicon-hubot::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f09d";
+}
+atom-notifications .octicon-inbox::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0cf";
+}
+atom-notifications .octicon-info::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f059";
+}
+atom-notifications .octicon-issue-closed::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f028";
+}
+atom-notifications .octicon-issue-opened::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f026";
+}
+atom-notifications .octicon-issue-reopened::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f027";
+}
+atom-notifications .octicon-jersey::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f019";
+}
+atom-notifications .octicon-jump-down::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f072";
+}
+atom-notifications .octicon-jump-left::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a5";
+}
+atom-notifications .octicon-jump-right::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a6";
+}
+atom-notifications .octicon-jump-up::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f073";
+}
+atom-notifications .octicon-key::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f049";
+}
+atom-notifications .octicon-keyboard::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f00d";
+}
+atom-notifications .octicon-law::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d8";
+}
+atom-notifications .octicon-light-bulb::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f000";
+}
+atom-notifications .octicon-link::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05c";
+}
+atom-notifications .octicon-link-external::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f07f";
+}
+atom-notifications .octicon-list-ordered::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f062";
+}
+atom-notifications .octicon-list-unordered::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f061";
+}
+atom-notifications .octicon-location::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f060";
+}
+atom-notifications .octicon-lock::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06a";
+}
+atom-notifications .octicon-log-in::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f036";
+}
+atom-notifications .octicon-log-out::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f032";
+}
+atom-notifications .octicon-logo-github::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f092";
+}
+atom-notifications .octicon-mail::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f03b";
+}
+atom-notifications .octicon-mail-read::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f03c";
+}
+atom-notifications .octicon-mail-reply::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f051";
+}
+atom-notifications .octicon-mark-github::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f00a";
+}
+atom-notifications .octicon-markdown::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c9";
+}
+atom-notifications .octicon-megaphone::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f077";
+}
+atom-notifications .octicon-mention::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0be";
+}
+atom-notifications .octicon-microscope::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f089";
+}
+atom-notifications .octicon-milestone::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f075";
+}
+atom-notifications .octicon-mirror::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f024";
+}
+atom-notifications .octicon-mirror-private::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f06a";
+}
+atom-notifications .octicon-mirror-public::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f024";
+}
+atom-notifications .octicon-mortar-board::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d7";
+}
+atom-notifications .octicon-move-down::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a8";
+}
+atom-notifications .octicon-move-left::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f074";
+}
+atom-notifications .octicon-move-right::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a9";
+}
+atom-notifications .octicon-move-up::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0a7";
+}
+atom-notifications .octicon-mute::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f080";
+}
+atom-notifications .octicon-no-newline::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f09c";
+}
+atom-notifications .octicon-octoface::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f008";
+}
+atom-notifications .octicon-organization::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f037";
+}
+atom-notifications .octicon-package::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c4";
+}
+atom-notifications .octicon-paintcan::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d1";
+}
+atom-notifications .octicon-pencil::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f058";
+}
+atom-notifications .octicon-person::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f018";
+}
+atom-notifications .octicon-person-add::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f018";
+}
+atom-notifications .octicon-person-follow::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f018";
+}
+atom-notifications .octicon-pin::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f041";
+}
+atom-notifications .octicon-playback-fast-forward::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0bd";
+}
+atom-notifications .octicon-playback-pause::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0bb";
+}
+atom-notifications .octicon-playback-play::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0bf";
+}
+atom-notifications .octicon-playback-rewind::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0bc";
+}
+atom-notifications .octicon-plug::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d4";
+}
+atom-notifications .octicon-plus::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05d";
+}
+atom-notifications .octicon-podium::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0af";
+}
+atom-notifications .octicon-primitive-dot::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f052";
+}
+atom-notifications .octicon-primitive-square::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f053";
+}
+atom-notifications .octicon-pulse::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f085";
+}
+atom-notifications .octicon-puzzle::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c0";
+}
+atom-notifications .octicon-question::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02c";
+}
+atom-notifications .octicon-quote::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f063";
+}
+atom-notifications .octicon-radio-tower::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f030";
+}
+atom-notifications .octicon-remove-close::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f081";
+}
+atom-notifications .octicon-repo::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f001";
+}
+atom-notifications .octicon-repo-clone::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04c";
+}
+atom-notifications .octicon-repo-create::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05d";
+}
+atom-notifications .octicon-repo-delete::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f001";
+}
+atom-notifications .octicon-repo-force-push::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f04a";
+}
+atom-notifications .octicon-repo-forked::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f002";
+}
+atom-notifications .octicon-repo-pull::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f006";
+}
+atom-notifications .octicon-repo-push::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f005";
+}
+atom-notifications .octicon-repo-sync::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f087";
+}
+atom-notifications .octicon-rocket::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f033";
+}
+atom-notifications .octicon-rss::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f034";
+}
+atom-notifications .octicon-ruby::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f047";
+}
+atom-notifications .octicon-screen-full::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f066";
+}
+atom-notifications .octicon-screen-normal::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f067";
+}
+atom-notifications .octicon-search::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02e";
+}
+atom-notifications .octicon-search-save::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02e";
+}
+atom-notifications .octicon-server::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f097";
+}
+atom-notifications .octicon-settings::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f07c";
+}
+atom-notifications .octicon-sign-in::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f036";
+}
+atom-notifications .octicon-sign-out::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f032";
+}
+atom-notifications .octicon-split::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c6";
+}
+atom-notifications .octicon-squirrel::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0b2";
+}
+atom-notifications .octicon-star::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02a";
+}
+atom-notifications .octicon-star-add::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02a";
+}
+atom-notifications .octicon-star-delete::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f02a";
+}
+atom-notifications .octicon-steps::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c7";
+}
+atom-notifications .octicon-stop::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f08f";
+}
+atom-notifications .octicon-sync::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f087";
+}
+atom-notifications .octicon-tag::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f015";
+}
+atom-notifications .octicon-tag-add::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f015";
+}
+atom-notifications .octicon-tag-remove::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f015";
+}
+atom-notifications .octicon-telescope::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f088";
+}
+atom-notifications .octicon-terminal::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0c8";
+}
+atom-notifications .octicon-three-bars::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05e";
+}
+atom-notifications .octicon-tools::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f031";
+}
+atom-notifications .octicon-trashcan::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0d0";
+}
+atom-notifications .octicon-triangle-down::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05b";
+}
+atom-notifications .octicon-triangle-left::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f044";
+}
+atom-notifications .octicon-triangle-right::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f05a";
+}
+atom-notifications .octicon-triangle-up::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0aa";
+}
+atom-notifications .octicon-unfold::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f039";
+}
+atom-notifications .octicon-unmute::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f0ba";
+}
+atom-notifications .octicon-versions::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f064";
+}
+atom-notifications .octicon-x::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\f081";
+}
+atom-notifications .octicon-zap::before {
+  display: inline-block;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  content: "\26A1";
+}
+atom-notifications::-webkit-scrollbar,
+atom-notifications::-moz-scrollbar,
+atom-notifications::-ms-scrollbar,
+atom-notifications::scrollbar {
+  display: none;
+}
+atom-notifications atom-notification .close-all {
+  display: none;
+}
+atom-notifications atom-notification:first-child .close-all {
+  display: block;
+}
+atom-notifications atom-notification:first-child.has-close .message {
+  padding-right: 115px;
+}
+atom-notifications atom-notification:only-child .close-all {
+  display: none;
+}
+atom-notifications atom-notification:only-child.has-close .message {
+  padding-right: 34px;
+}
+atom-notification {
+  float: right;
+  clear: right;
+  position: relative;
+  width: 450px;
+  padding-left: 30px;
+  margin-bottom: 2px;
+  max-height: 800px;
+  word-wrap: break-word;
+  pointer-events: auto;
+  outline: none;
+}
+atom-notification.icon:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 2px 0 0 2px;
+}
+atom-notification:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+}
+atom-notification .meta,
+atom-notification .close,
+atom-notification .detail,
+atom-notification .stack-toggle,
+atom-notification .stack-container {
+  display: none;
+}
+atom-notification.fatal .meta,
+atom-notification.has-description .meta,
+atom-notification.has-buttons .meta,
+atom-notification.has-close .close,
+atom-notification.has-detail .detail,
+atom-notification.has-stack .stack-toggle,
+atom-notification.has-stack .stack-container {
+  display: block;
+}
+atom-notification .item {
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+atom-notification .item.message {
+  border-top: none;
+}
+atom-notification .item.message p:last-child {
+  margin-bottom: 0;
+}
+atom-notification.has-close .message {
+  padding-right: 34px;
+}
+atom-notification .content {
+  border-radius: 0 2px 2px 0;
+}
+atom-notification .message {
+  max-height: 200px;
+  overflow-y: auto;
+}
+atom-notification .close-all.btn {
+  position: absolute;
+  top: 5px;
+  right: 38px;
+  background: none;
+}
+atom-notification .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: none;
+  color: inherit;
+  opacity: .3;
+}
+atom-notification .close:hover,
+atom-notification .close:focus {
+  opacity: 1;
+  color: inherit;
+}
+atom-notification .close:active {
+  opacity: .2;
+}
+atom-notification .close:before {
+  margin: 0;
+  color: inherit;
+}
+atom-notification.has-detail {
+  width: 450px;
+}
+atom-notification .detail {
+  font-size: .8em;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-clip: padding-box;
+  max-height: 500px;
+  overflow-y: auto;
+}
+atom-notification .detail .line {
+  white-space: pre;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+atom-notification .detail .stack-toggle {
+  margin-top: 10px;
+}
+atom-notification .detail .stack-toggle .icon:before {
+  margin: 0;
+}
+atom-notification .detail .stack-container {
+  margin-top: 10px;
+}
+atom-notification .description {
+  font-size: .8em;
+}
+atom-notification .description p:last-child {
+  margin-bottom: 0;
+}
+atom-notification .btn-toolbar {
+  margin-top: 10px;
+}
+atom-notification .btn-copy-report {
+  vertical-align: middle;
+}
+atom-notification.fatal .content {
+  color: #000000;
+  background-color: #ff4d4d;
+}
+atom-notification.fatal a {
+  color: #660000;
+}
+atom-notification.fatal code {
+  color: #000000;
+  background-color: #fa2e2e;
+}
+atom-notification.fatal.icon:before {
+  color: #ff8585;
+  background-color: #cc0000;
+}
+atom-notification.fatal .close-all.btn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+}
+atom-notification.fatal .close-all.btn:hover {
+  background: none;
+  border-color: rgba(0, 0, 0, 0.8);
+  color: #000000;
+}
+atom-notification.error .content {
+  color: #000000;
+  background-color: #ff4d4d;
+}
+atom-notification.error a {
+  color: #660000;
+}
+atom-notification.error code {
+  color: #000000;
+  background-color: #fa2e2e;
+}
+atom-notification.error.icon:before {
+  color: #ff8585;
+  background-color: #cc0000;
+}
+atom-notification.error .close-all.btn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+}
+atom-notification.error .close-all.btn:hover {
+  background: none;
+  border-color: rgba(0, 0, 0, 0.8);
+  color: #000000;
+}
+atom-notification.warning .content {
+  color: #6c2c05;
+  background-color: #ffa380;
+}
+atom-notification.warning a {
+  color: #ce5509;
+}
+atom-notification.warning code {
+  color: #6c2c05;
+  background-color: #fb8c60;
+}
+atom-notification.warning.icon:before {
+  color: #ffccb8;
+  background-color: #ff4800;
+}
+atom-notification.warning .close-all.btn {
+  border: 1px solid rgba(108, 44, 5, 0.3);
+  color: rgba(108, 44, 5, 0.6);
+  text-shadow: none;
+}
+atom-notification.warning .close-all.btn:hover {
+  background: none;
+  border-color: rgba(108, 44, 5, 0.8);
+  color: #6c2c05;
+}
+atom-notification.info .content {
+  color: #112e4d;
+  background-color: #80cbff;
+}
+atom-notification.info a {
+  color: #2460a0;
+}
+atom-notification.info code {
+  color: #112e4d;
+  background-color: #60bcfb;
+}
+atom-notification.info.icon:before {
+  color: #b8e2ff;
+  background-color: #0098ff;
+}
+atom-notification.info .close-all.btn {
+  border: 1px solid rgba(17, 46, 77, 0.3);
+  color: rgba(17, 46, 77, 0.6);
+  text-shadow: none;
+}
+atom-notification.info .close-all.btn:hover {
+  background: none;
+  border-color: rgba(17, 46, 77, 0.8);
+  color: #112e4d;
+}
+atom-notification.success .content {
+  color: #05371b;
+  background-color: #72efa8;
+}
+atom-notification.success a {
+  color: #0e9448;
+}
+atom-notification.success code {
+  color: #05371b;
+  background-color: #56e695;
+}
+atom-notification.success.icon:before {
+  color: #a4f5c7;
+  background-color: #17ca65;
+}
+atom-notification.success .close-all.btn {
+  border: 1px solid rgba(5, 55, 27, 0.3);
+  color: rgba(5, 55, 27, 0.6);
+  text-shadow: none;
+}
+atom-notification.success .close-all.btn:hover {
+  background: none;
+  border-color: rgba(5, 55, 27, 0.8);
+  color: #05371b;
+}
+atom-notification {
+  -webkit-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+  -moz-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+  -o-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+  animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+}
+atom-notification[type="fatal"] {
+  -webkit-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499), notification-shake 4s 2s;
+  -moz-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499), notification-shake 4s 2s;
+  -o-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499), notification-shake 4s 2s;
+  animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499), notification-shake 4s 2s;
+  -webkit-animation-iteration-count: 1, 3;
+  -moz-animation-iteration-count: 1, 3;
+  -o-animation-iteration-count: 1, 3;
+  animation-iteration-count: 1, 3;
+}
+atom-notification[type="fatal"]:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+atom-notification.remove,
+atom-notification.remove:hover {
+  -webkit-animation: notification-hide 0.24s cubic-bezier(0.33859, -0.42, 1, -0.22), notification-shrink 0.24s 0.24s cubic-bezier(0.5, 0, 0, 1);
+  -moz-animation: notification-hide 0.24s cubic-bezier(0.33859, -0.42, 1, -0.22), notification-shrink 0.24s 0.24s cubic-bezier(0.5, 0, 0, 1);
+  -o-animation: notification-hide 0.24s cubic-bezier(0.33859, -0.42, 1, -0.22), notification-shrink 0.24s 0.24s cubic-bezier(0.5, 0, 0, 1);
+  animation: notification-hide 0.24s cubic-bezier(0.33859, -0.42, 1, -0.22), notification-shrink 0.24s 0.24s cubic-bezier(0.5, 0, 0, 1);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+lesshat-selector {
+  -lh-property: 0; }
+@-webkit-keyframes notification-show{ }
+@-moz-keyframes notification-show{ }
+@-o-keyframes notification-show{ }
+@keyframes notification-show{ ;
+}
+@-webkit-keyframes notification-show {
+  0% {
+    opacity: 0;
+    transform: perspective(450px) translate(0, -30px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(450px) translate(0, 0) rotateX(0deg);
+  }
+}
+@-moz-keyframes notification-show {
+  0% {
+    opacity: 0;
+    transform: perspective(450px) translate(0, -30px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(450px) translate(0, 0) rotateX(0deg);
+  }
+}
+@-ms-keyframes notification-show {
+  0% {
+    opacity: 0;
+    transform: perspective(450px) translate(0, -30px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(450px) translate(0, 0) rotateX(0deg);
+  }
+}
+@keyframes notification-show {
+  0% {
+    opacity: 0;
+    transform: perspective(450px) translate(0, -30px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(450px) translate(0, 0) rotateX(0deg);
+  }
+}
+lesshat-selector {
+  -lh-property: 0; }
+@-webkit-keyframes notification-hide{ }
+@-moz-keyframes notification-hide{ }
+@-o-keyframes notification-hide{ }
+@keyframes notification-hide{ ;
+}
+@-webkit-keyframes notification-hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@-moz-keyframes notification-hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@-ms-keyframes notification-hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes notification-hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+lesshat-selector {
+  -lh-property: 0; }
+@-webkit-keyframes notification-shrink{ }
+@-moz-keyframes notification-shrink{ }
+@-o-keyframes notification-shrink{ }
+@keyframes notification-shrink{ ;
+}
+@-webkit-keyframes notification-shrink {
+  0% {
+    opacity: 0;
+    max-height: 800px;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: scale(0.8);
+  }
+}
+@-moz-keyframes notification-shrink {
+  0% {
+    opacity: 0;
+    max-height: 800px;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: scale(0.8);
+  }
+}
+@-ms-keyframes notification-shrink {
+  0% {
+    opacity: 0;
+    max-height: 800px;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes notification-shrink {
+  0% {
+    opacity: 0;
+    max-height: 800px;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: scale(0.8);
+  }
+}
+lesshat-selector {
+  -lh-property: 0; }
+@-webkit-keyframes notification-shake{ }
+@-moz-keyframes notification-shake{ }
+@-o-keyframes notification-shake{ }
+@keyframes notification-shake{ ;
+}
+@-webkit-keyframes notification-shake {
+  0% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(-4px);
+  }
+  4% {
+    transform: translateX(8px);
+  }
+  6% {
+    transform: translateX(-4px);
+  }
+  8% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes notification-shake {
+  0% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(-4px);
+  }
+  4% {
+    transform: translateX(8px);
+  }
+  6% {
+    transform: translateX(-4px);
+  }
+  8% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-ms-keyframes notification-shake {
+  0% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(-4px);
+  }
+  4% {
+    transform: translateX(8px);
+  }
+  6% {
+    transform: translateX(-4px);
+  }
+  8% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes notification-shake {
+  0% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(-4px);
+  }
+  4% {
+    transform: translateX(8px);
+  }
+  6% {
+    transform: translateX(-4px);
+  }
+  8% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
