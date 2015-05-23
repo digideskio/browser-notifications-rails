@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function(){
   var NotificationManager;
   NotificationManager = require('./lib/notifications.ls');
-  window.atomNotifications = new NotificationManager(window.atomNotifications, window.atomNotification);
+  window.atomNotifications = new NotificationManager;
   window.atomNotification = require("./lib/notification.ls");
   return document.dispatchEvent(new CustomEvent("notification:ready"));
 });
@@ -555,26 +555,21 @@ NotificationsElement = require('./elements/notifications-element.ls');
 NotificationManager = (function(){
   NotificationManager.displayName = 'NotificationManager';
   var Disposable, prototype = NotificationManager.prototype, constructor = NotificationManager;
-  function NotificationManager(atomNotifications, atomNotification){
-    this.atomNotifications = atomNotifications;
-    this.atomNotification = atomNotification;
+  function NotificationManager(){
     this.stack = [];
     this.isInitialized = false;
     this.duplicateTimeDelay = 500;
     this.lastNotification = void 8;
     this.notificationsElement = void 8;
     this.autoActivate = true;
+    window.atomNotificationsCache == null && (window.atomNotificationsCache = []);
+    this.safemode = true;
   }
   prototype.setAutoActivate = function(autoActivate){
     this.autoActivate = autoActivate;
   };
   prototype.getAutoActivate = function(){
     return this.autoActivate;
-  };
-  prototype.restore = function(){
-    window.atomNotifications = this.atomNotifications;
-    window.atomNotification = this.atomNotification;
-    return this;
   };
   prototype.initialize = function(parentNode){
     parentNode == null && (parentNode = document.body);
@@ -583,7 +578,28 @@ NotificationManager = (function(){
     }
     this.notificationsElement = new NotificationsElement;
     parentNode.appendChild(this.notificationsElement);
-    return this.isInitialized = true;
+    this.isInitialized = true;
+    if (this.safemode) {
+      if (this._turbolinks != null) {
+        document.body.removeEventListener("page:load", this._turbolinks);
+      }
+      this._turbolinks = this.turbolinks();
+      return document.body.addEventListener("page:load", this._turbolinks);
+    }
+  };
+  prototype.turbolinks = function(){
+    var this$;
+    this$ = this;
+    return function(){
+      return this$.reapply();
+    };
+  };
+  prototype.reapply = function(parentNode){
+    parentNode == null && (parentNode = document.body);
+    window.atomNotificationsCache.forEach(function(element){
+      return document.body.appendChild(element);
+    });
+    return parentNode.appendChild(this.notificationsElement);
   };
   prototype.activate = function(parentNode){
     var this$ = this;
@@ -598,7 +614,11 @@ NotificationManager = (function(){
       ref$.remove();
     }
     this.notificationsElement = void 8;
-    return this.isInitialized = false;
+    this.isInitialized = false;
+    if (this.safemode && this._turbolinks != null) {
+      document.body.removeEventListener("page:load", this._turbolinks);
+    }
+    return this._turbolinks = void 8;
   };
   prototype.addNotificationView = function(notification){
     var timeSpan, element, this$;
@@ -705,6 +725,8 @@ TemplateHelper = {
     template = document.createElement('template');
     template.innerHTML = htmlString;
     document.body.appendChild(template);
+    window.atomNotificationsCache == null && (window.atomNotificationsCache = []);
+    window.atomNotificationsCache.push(template);
     return template;
   },
   render: function(template){

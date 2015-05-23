@@ -1958,7 +1958,7 @@ atom-notification.remove:hover {
   animation-fill-mode: forwards;
 }
 lesshat-selector {
-  -lh-property: 0; }
+  -lh-property: 0; } 
 @-webkit-keyframes notification-show{ }
 @-moz-keyframes notification-show{ }
 @-o-keyframes notification-show{ }
@@ -2005,7 +2005,7 @@ lesshat-selector {
   }
 }
 lesshat-selector {
-  -lh-property: 0; }
+  -lh-property: 0; } 
 @-webkit-keyframes notification-hide{ }
 @-moz-keyframes notification-hide{ }
 @-o-keyframes notification-hide{ }
@@ -2052,7 +2052,7 @@ lesshat-selector {
   }
 }
 lesshat-selector {
-  -lh-property: 0; }
+  -lh-property: 0; } 
 @-webkit-keyframes notification-shrink{ }
 @-moz-keyframes notification-shrink{ }
 @-o-keyframes notification-shrink{ }
@@ -2107,7 +2107,7 @@ lesshat-selector {
   }
 }
 lesshat-selector {
-  -lh-property: 0; }
+  -lh-property: 0; } 
 @-webkit-keyframes notification-shake{ }
 @-moz-keyframes notification-shake{ }
 @-o-keyframes notification-shake{ }
