@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'browser-notifications-rails'
   s.version     = Browser::Notifications::Rails::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.files       = Dir['{app,lib}/**/*'] + ['LICENSE', 'THIRD-PARTY-LICENSE.md', 'README.md']
+  s.files       = Dir['{lib,vendor}/**/*'] + ['LICENSE', 'THIRD-PARTY-LICENSE.md', 'README.md']
   s.authors     = ['YUKI', 'Atom Authors']
   s.email       = []
   s.homepage    = 'https://github.com/yukimono/browser-notifications-rails'

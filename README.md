@@ -22,6 +22,7 @@ see [yukimono/browser-notification/index.html](https://github.com/yukimono/brows
 A sass mixin is provided to help stylize different colors. The usage is:
 
 ```scss
+@import "browser-notifications/mixin";
 atom-notifications.surprise {
   @include browser-notification(lighten(purple, 0.20), purple)
 }
