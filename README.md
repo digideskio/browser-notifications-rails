@@ -4,8 +4,8 @@ A railtie for [yukimono/browser-notifications](https://github.com/yukimono/brows
 
 ## requirements
 
-* (https://github.com/torbjon/octicons-rails)
-* (https://github.com/seyhunak/twitter-bootstrap-rails)
+* octicons
+* bootstrap 2
 
 ## usage
 
