@@ -1,7 +1,7 @@
 atom-notifications {
   display: block;
   z-index: 1000;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1654,16 +1654,19 @@ atom-notifications::scrollbar {
 atom-notifications atom-notification .close-all {
   display: none;
 }
-atom-notifications atom-notification:first-child .close-all {
+atom-notifications atom-notification:not(.has-close) .close-all {
+  right: 5px;
+}
+atom-notifications.is-dismissable atom-notification:first-child .close-all {
   display: block;
 }
-atom-notifications atom-notification:first-child.has-close .message {
+atom-notifications.is-dismissable atom-notification:first-child.has-close .message {
   padding-right: 115px;
 }
-atom-notifications atom-notification:only-child .close-all {
+atom-notifications.is-dismissable atom-notification:only-child .close-all {
   display: none;
 }
-atom-notifications atom-notification:only-child.has-close .message {
+atom-notifications.is-dismissable atom-notification:only-child.has-close .message {
   padding-right: 34px;
 }
 atom-notification {
@@ -1677,6 +1680,9 @@ atom-notification {
   word-wrap: break-word;
   pointer-events: auto;
   outline: none;
+}
+atom-notification * {
+  font-family: "Meiryo UI", "Myriad Pro", "Open Sans", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Verdana", sans-serif;
 }
 atom-notification.icon:before {
   position: absolute;
@@ -2191,5 +2197,35 @@ lesshat-selector {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@media (max-width: 470px) {
+  atom-notifications {
+    padding: 0 !important;
+    left: 0 !important;
+  }
+  atom-notifications,
+  atom-notifications * {
+    border-radius: 0 !important;
+  }
+  atom-notification {
+    padding-left: 0 !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+  atom-notification:before {
+    display: none !important;
+  }
+  atom-notification[type="fatal"] {
+    -webkit-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+    -moz-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+    -o-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+    animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+  }
+  atom-notification .item:not(.message) {
+    padding: 2px 10px !important;
+  }
+  atom-notification .meta.item > div {
+    margin-top: 2px !important;
   }
 }
